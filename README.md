@@ -2,7 +2,6 @@
 Task 4: Firewall Setup and Configuration Features:  Install and set up firewalld using nftables on a linux virtual machine. Use trusted-zone, internal-zone, and public-zone.
 
 ## Setting up Firewalld on a Linux Virtual Machine
-
 ![Firewalld Logo](https://raw.githubusercontent.com/firewalld/firewalld/master/icons/firewalld-logo.png)
 
 Firewalld is a firewall management tool available on various Linux distributions that provides an easy-to-use interface for configuring and managing network security rules. This README guide will walk you through the process of installing and setting up Firewalld on a Linux virtual machine. By following these steps, you'll be able to secure your VM and protect it from unauthorized access.
@@ -51,6 +50,17 @@ sudo firewall-cmd --get-zones
 ```bash
 sudo firewall-cmd --set-default-zone=public
 ```
-
+- Add a serviece to a zone
+```bash
+sudo firewall-cmd --zone=public --add-service=http --permanent
+```
+- Open a specific port
+```bash
+sudo firewall-cmd --zone=public --add-port=22/tcp --permanent
+```
+- Remove a service or port from a zone
+```bash
+sudo firewall-cmd --zone=public --remove-service=http --permanent
+```
 
    
