@@ -65,7 +65,7 @@ If Firewlld is installed, you'll see the version number. Otherwise proceed with 
 
 ## Network Firewall Configuration using Firewalld
 
-This document provides step-by-step instructions to configure the firewall using firewalld for the given network topology.
+This document provides step-by-step instructions to configure the firewall using firewalld for the given sample network topology.
 
 ## Network Topology
 
