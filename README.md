@@ -27,7 +27,7 @@ If Firewlld is installed, you'll see the version number. Otherwise proceed with 
    ```bash
    sudo intall firewalld
    ```
-2. *Sta]'''''''rt and enable the Firewalld service*
+2. *Start and enable the Firewalld service*
    ```bash
    sudo systemctl start firewalld
    sudo systemctl enable firewalld
@@ -61,5 +61,6 @@ If Firewlld is installed, you'll see the version number. Otherwise proceed with 
    ```bash
    sudo firewall-cmd --zone=public --remove-service=http --permanent
    ```
+   
 
    
