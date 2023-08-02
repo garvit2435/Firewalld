@@ -68,7 +68,10 @@ If Firewlld is installed, you'll see the version number. Otherwise proceed with 
 This document provides step-by-step instructions to configure the firewall using firewalld for the given network topology.
 
 ## Network Topology
-![Alt Firewall](PIC.PNG)
+
+
+<img width="1475" alt="PIC" src="https://github.com/garvit2435/DevOps_task4_Luganodes/assets/74408151/880722e3-b081-4859-9fa9-40c72a1297a0">
+
 
 
 ## Configuration Steps
