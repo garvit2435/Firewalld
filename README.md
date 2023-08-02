@@ -124,7 +124,7 @@ sudo firewall-cmd --permanent --zone=custom_public --add-source-port=1024-65535/
 ```
 ### Step 5: Allow Forwarding from custom_trusted to custom_internal
 
-- Let us assume a DB serve whose IP address is 192.168.0.10 and a sample App server whose IP is 192.168.0.20
+- Let us assume a DB server whose IP address is 192.168.0.10 and a sample App server whose IP address is 192.168.0.20
   
 ```bash
 sudo firewall-cmd --permanent --zone=custom_trusted --add-forward-port=port=22:proto=tcp:toport=22:toaddr=192.168.0.10
