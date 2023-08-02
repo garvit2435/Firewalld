@@ -60,11 +60,9 @@ If Firewlld is installed, you'll see the version number. Otherwise proceed with 
 - Remove a service or port from a zone
    ```bash
    sudo firewall-cmd --zone=public --remove-service=http --permanent
-   ```
+   ``` 
 
-# Network Firewall Configuration using Firewalld
-
-## Overview
+## Network Firewall Configuration using Firewalld
 
 This document provides step-by-step instructions to configure the firewall using firewalld for the given network topology.
 
