@@ -139,17 +139,18 @@ sudo firewall-cmd --reload
 ```
 
 ### Step 8: Fetch all details
--Fetching all the details of custom_public zone
+
+- Fetching all the details of custom_public zone
 ```bash
 sudo firewall-cmd --zone=custom_public --list-all
 ```
 ![public-img](https://github.com/garvit2435/DevOps_task4_Luganodes/assets/74408151/d0ab6db7-b257-4317-9f6d-18b1fd36a895)
--Fetching all the details of custom_internal zone
+- Fetching all the details of custom_internal zone
 ```bash
 sudo firewall-cmd --zone=custom_internal --list-all
 ```
 ![internal-img](https://github.com/garvit2435/DevOps_task4_Luganodes/assets/74408151/98cc10ed-ee2a-4636-943a-00c7265c5400)
--Fetching all the details of custom_trusted zone
+- Fetching all the details of custom_trusted zone
 ```bash
 sudo firewall-cmd --zone=custom_trusted --list-all
 ```
