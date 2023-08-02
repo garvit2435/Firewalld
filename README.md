@@ -143,10 +143,12 @@ sudo firewall-cmd --reload
 sudo firewall-cmd --zone=custom_public --list-all
 ```
 ![public-img](https://github.com/garvit2435/DevOps_task4_Luganodes/assets/74408151/d0ab6db7-b257-4317-9f6d-18b1fd36a895)
+
 ```bash
 sudo firewall-cmd --zone=custom_internal --list-all
 ```
 ![internal-img](https://github.com/garvit2435/DevOps_task4_Luganodes/assets/74408151/98cc10ed-ee2a-4636-943a-00c7265c5400)
+
 ```bash
 sudo firewall-cmd --zone=custom_trusted --list-all
 ```
