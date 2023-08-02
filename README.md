@@ -90,8 +90,12 @@ sudo firewall-cmd --permanent --zone=internal --set-source=192.168.0.0/24
 sudo firewall-cmd --permanent --new-zone=public
 sudo firewall-cmd --permanent --zone=internal --set-source=17.0.0.0/24
 ```
-
-### Step 2: Create Zones
+### Step 2: Assign interfaces to corresponding zones
+```bash
+sudo firewall-cmd --permanent --zone=trusted --add-interface=eth0
+sudo firewall-cmd --permanent --zone=internal --add-interface=eth1
+```
+### Step 3: Define services
 
 - Define services for each zone
 ```bash
@@ -101,6 +105,32 @@ sudo firewall-cmd --permanent --zone=internal --add-service=http
 sudo firewall-cmd --permanent --zone=public --add-service=http
 sudo firewall-cmd --permanent --zone=public --add-service=ssh
 ```
+
+### Step 4: Define source ports for each zone
+```bash
+sudo firewall-cmd --permanent --zone=internal --add-source-port=1024-65535/tcp
+sudo firewall-cmd --permanent --zone=internal --add-source-port=1024-65535/udp
+sudo firewall-cmd --permanent --zone=public --add-source-port=1024-65535/tcp
+sudo firewall-cmd --permanent --zone=public --add-source-port=1024-65535/udp
+```
+### Step 5: Allow Forwarding from Trusted to Internal
+```bash
+sudo firewall-cmd --permanent --zone=trusted --add-forward-port=port=22:proto=tcp:toport=22:toaddr=192.168.0.10
+sudo firewall-cmd --permanent --zone=trusted --add-forward-port=port=80:proto=tcp:toport=80:toaddr=192.168.0.20
+```
+### Step 6: Set Target
+```bash
+sudo firewall-cmd --permanent --zone=trusted --set-target=ACCEPT
+sudo firewall-cmd --permanent --zone=internal --set-target=ACCEPT
+sudo firewall-cmd --permanent --zone=public --set-target=ACCEPT
+```
+### Step 7: Reload firewall 
+```bash
+sudo firewall-cmd --reload
+```
+
+
+
 
 
    
