@@ -61,6 +61,50 @@ If Firewlld is installed, you'll see the version number. Otherwise proceed with 
    ```bash
    sudo firewall-cmd --zone=public --remove-service=http --permanent
    ```
+
+# Network Firewall Configuration using Firewalld
+
+## Overview
+
+This document provides step-by-step instructions to configure the firewall using firewalld for the given network topology.
+
+## Network Topology
+
+
+## Configuration Steps
+
+### Step 1: Create Zones
+
+
+- Create Trusted Zone with source IP range 10.0.0.0/24
+ ```bash
+sudo firewall-cmd --permanent --new-zone=trusted
+sudo firewall-cmd --permanent --zone=trusted --set-source=10.0.0.0/24
+```
+- Create Internal Zone with source IP range 192.168.0.0/24
+```bash
+sudo firewall-cmd --permanent --new-zone=internal
+sudo firewall-cmd --permanent --zone=internal --set-source=192.168.0.0/24
+```
+
+- Create Public Zone for public IP range 17.0.0.0/24
+```bash
+sudo firewall-cmd --permanent --new-zone=public
+sudo firewall-cmd --permanent --zone=internal --set-source=17.0.0.0/24
+```
+
+### Step 2: Create Zones
+
+- Define services for each zone
+```bash
+sudo firewall-cmd --permanent --zone=trusted --add-service=ssh
+sudo firewall-cmd --permanent --zone=internal --add-service=ssh
+sudo firewall-cmd --permanent --zone=internal --add-service=http
+sudo firewall-cmd --permanent --zone=public --add-service=http
+sudo firewall-cmd --permanent --zone=public --add-service=ssh
+```
+
+
    
 
    
