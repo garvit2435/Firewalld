@@ -67,7 +67,7 @@ If Firewlld is installed, you'll see the version number. Otherwise proceed with 
 This document provides step-by-step instructions to configure the firewall using firewalld for the given network topology.
 
 ## Network Topology
-![Firewall](C:\Users\Garvit\Downloads\firewall.png)
+![Firewall](PIC.png)
 
 
 ## Configuration Steps
