@@ -133,6 +133,7 @@ sudo firewall-cmd --permanent --zone=custom_public --set-target=ACCEPT
 ```bash
 sudo firewall-cmd --reload
 ```
+
 ### Step 8: Fetch all details
 ```bash
 sudo firewall-cmd --zone=custom_public --list-all
