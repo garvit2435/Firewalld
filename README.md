@@ -22,6 +22,35 @@ Firewalld should be pre-installed on many modern Linux distributions. However, t
 
    Open a terminal on your Linux VM and execute the following command:
 
-   bash
+   ```bash
    sudo firewall-cmd --version
+If Firewlld is installed, you'll see the version number. Otherwise proceed with the installation as follows:
+1. *Install Firewalld*
+```bash
+sudo intall firewalld
+```
+2. *Satrt and enable the Firewalld service*
+```bash
+sudo systemctl start firewalld
+sudo systemctl enable firewalld
+```
+## Basic Usage
+- Check the status of Firewalld
+```bash
+sudo firewall-cmd --state
+```
+- Reload Firewalld rules
+```bash
+sudo firewall-cmd --reload
+```
+- View available zones
+```bash
+sudo firewall-cmd --get-zones
+```
+- Set the default zone:
+```bash
+sudo firewall-cmd --set-default-zone=public
+```
+
+
    
