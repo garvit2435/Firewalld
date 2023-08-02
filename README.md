@@ -33,6 +33,14 @@ If Firewlld is installed, you'll see the version number. Otherwise proceed with 
    sudo systemctl start firewalld
    sudo systemctl enable firewalld
    ```
+
+## Note
+Use the following command to switch to the root user and access the root directory:
+
+```bash
+sudo su -
+```
+
 ## Basic Usage
 - Check the status of Firewalld
    ```bash
