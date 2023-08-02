@@ -24,42 +24,42 @@ Firewalld should be pre-installed on many modern Linux distributions. However, t
    sudo firewall-cmd --version
 If Firewlld is installed, you'll see the version number. Otherwise proceed with the installation as follows:
 1. *Install Firewalld*
-```bash
-sudo intall firewalld
-```
+   ```bash
+   sudo intall firewalld
+   ```
 2. *Satrt and enable the Firewalld service*
-```bash
-sudo systemctl start firewalld
-sudo systemctl enable firewalld
-```
+   ```bash
+   sudo systemctl start firewalld
+   sudo systemctl enable firewalld
+   ```
 ## Basic Usage
 - Check the status of Firewalld
-```bash
-sudo firewall-cmd --state
-```
+   ```bash
+   sudo firewall-cmd --state
+   ```
 - Reload Firewalld rules
-```bash
-sudo firewall-cmd --reload
-```
+   ```bash
+   sudo firewall-cmd --reload
+   ```
 - View available zones
-```bash
-sudo firewall-cmd --get-zones
-```
+   ```bash
+   sudo firewall-cmd --get-zones
+   ```
 - Set the default zone:
-```bash
-sudo firewall-cmd --set-default-zone=public
-```
+   ```bash
+   sudo firewall-cmd --set-default-zone=public
+   ```
 - Add a serviece to a zone
-```bash
-sudo firewall-cmd --zone=public --add-service=http --permanent
-```
+   ```bash
+   sudo firewall-cmd --zone=public --add-service=http --permanent
+   ```
 - Open a specific port
-```bash
-sudo firewall-cmd --zone=public --add-port=22/tcp --permanent
-```
+   ```bash
+   sudo firewall-cmd --zone=public --add-port=22/tcp --permanent
+   ```
 - Remove a service or port from a zone
-```bash
-sudo firewall-cmd --zone=public --remove-service=http --permanent
-```
+   ```bash
+   sudo firewall-cmd --zone=public --remove-service=http --permanent
+   ```
 
    
