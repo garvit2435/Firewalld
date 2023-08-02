@@ -98,6 +98,7 @@ sudo firewall-cmd --permanent --zone=custom_internal --set-source=17.0.0.0/24
 ### Step 2: Assign interfaces to corresponding zones
 ```bash
 sudo firewall-cmd --permanent --zone=custom_trusted --add-interface=eth0
+
 sudo firewall-cmd --permanent --zone=custom_internal --add-interface=eth1
 ```
 ### Step 3: Define services
@@ -105,8 +106,10 @@ sudo firewall-cmd --permanent --zone=custom_internal --add-interface=eth1
 - Define services for each zone
 ```bash
 sudo firewall-cmd --permanent --zone=custom_trusted --add-service=ssh
+
 sudo firewall-cmd --permanent --zone=custom_internal --add-service=ssh
 sudo firewall-cmd --permanent --zone=custom_internal --add-service=http
+
 sudo firewall-cmd --permanent --zone=custom_public --add-service=http
 sudo firewall-cmd --permanent --zone=custom_public --add-service=ssh
 ```
@@ -115,6 +118,7 @@ sudo firewall-cmd --permanent --zone=custom_public --add-service=ssh
 ```bash
 sudo firewall-cmd --permanent --zone=custom_internal --add-source-port=1024-65535/tcp
 sudo firewall-cmd --permanent --zone=custom_internal --add-source-port=1024-65535/udp
+
 sudo firewall-cmd --permanent --zone=custom_public --add-source-port=1024-65535/tcp
 sudo firewall-cmd --permanent --zone=custom_public --add-source-port=1024-65535/udp
 ```
