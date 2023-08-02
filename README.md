@@ -173,7 +173,7 @@ sudo firewall-cmd --zone=custom_trusted --list-all
 ![trusted-img](https://github.com/garvit2435/DevOps_task4_Luganodes/assets/74408151/065b386f-049a-41eb-8508-450e6465729d)
 
 
-                                                            ## Thank You
+## Thank You
 
 
    
