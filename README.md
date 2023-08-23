@@ -1,5 +1,5 @@
 
-# DevOps_Task4_Luganodes
+# Firewalld 
 Task 4: Firewall Setup and Configuration Features:  Install and set up firewalld using nftables on a linux virtual machine. Use trusted-zone, internal-zone, and public-zone.
 
 ## Setting up Firewalld on a Linux Virtual Machine
