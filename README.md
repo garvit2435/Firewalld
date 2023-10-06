@@ -78,7 +78,7 @@ This document provides step-by-step instructions to configure the firewall using
 ## Network Topology
 
 
-<img width="1475" alt="PIC" src="https://github.com/garvit2435/DevOps_task4_Luganodes/assets/74408151/880722e3-b081-4859-9fa9-40c72a1297a0">
+<img width="1475" alt="PIC" src="PIC.png">
 
 
 
